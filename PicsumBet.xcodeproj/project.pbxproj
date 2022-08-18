@@ -15,6 +15,8 @@
 		C581F19628ADFBC800CC96F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C581F19428ADFBC800CC96F4 /* LaunchScreen.storyboard */; };
 		C581F19F28ADFF9900CC96F4 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581F19E28ADFF9900CC96F4 /* HomepageViewController.swift */; };
 		C581F1A128ADFFA300CC96F4 /* HomepageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581F1A028ADFFA300CC96F4 /* HomepageViewModel.swift */; };
+		C581F1A528AE016C00CC96F4 /* HomepageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581F1A328AE016C00CC96F4 /* HomepageCollectionViewCell.swift */; };
+		C581F1A628AE016C00CC96F4 /* HomepageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C581F1A428AE016C00CC96F4 /* HomepageCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		C581F19728ADFBC800CC96F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C581F19E28ADFF9900CC96F4 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 		C581F1A028ADFFA300CC96F4 /* HomepageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewModel.swift; sourceTree = "<group>"; };
+		C581F1A328AE016C00CC96F4 /* HomepageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageCollectionViewCell.swift; sourceTree = "<group>"; };
+		C581F1A428AE016C00CC96F4 /* HomepageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomepageCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +79,20 @@
 		C581F19D28ADFF8600CC96F4 /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
+				C581F1A228AE015200CC96F4 /* HomepageCell */,
 				C581F19E28ADFF9900CC96F4 /* HomepageViewController.swift */,
 				C581F1A028ADFFA300CC96F4 /* HomepageViewModel.swift */,
 			);
 			path = Homepage;
+			sourceTree = "<group>";
+		};
+		C581F1A228AE015200CC96F4 /* HomepageCell */ = {
+			isa = PBXGroup;
+			children = (
+				C581F1A328AE016C00CC96F4 /* HomepageCollectionViewCell.swift */,
+				C581F1A428AE016C00CC96F4 /* HomepageCollectionViewCell.xib */,
+			);
+			path = HomepageCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C581F1A628AE016C00CC96F4 /* HomepageCollectionViewCell.xib in Resources */,
 				C581F19628ADFBC800CC96F4 /* LaunchScreen.storyboard in Resources */,
 				C581F19328ADFBC800CC96F4 /* Assets.xcassets in Resources */,
 				C581F19128ADFBC700CC96F4 /* Main.storyboard in Resources */,
@@ -154,6 +169,7 @@
 			files = (
 				C581F1A128ADFFA300CC96F4 /* HomepageViewModel.swift in Sources */,
 				C581F19F28ADFF9900CC96F4 /* HomepageViewController.swift in Sources */,
+				C581F1A528AE016C00CC96F4 /* HomepageCollectionViewCell.swift in Sources */,
 				C581F18E28ADFBC700CC96F4 /* ViewController.swift in Sources */,
 				C581F18A28ADFBC700CC96F4 /* AppDelegate.swift in Sources */,
 				C581F18C28ADFBC700CC96F4 /* SceneDelegate.swift in Sources */,
