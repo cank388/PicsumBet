@@ -10,12 +10,15 @@ import UIKit
 class HomepageViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    var activityView: UIActivityIndicatorView?
     var viewModel = HomepageViewModel()
     var homeModel: [PicModel]?
     var pageNumber = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityView = UIActivityIndicatorView(style: .large)
+        activityView?.center = self.view.center
         collectionView.register(UINib(nibName: "HomepageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomepageCollectionViewCell")
         viewModel.getPictureList(page: pageNumber) { [self] result in
             switch result {
@@ -48,11 +51,12 @@ extension HomepageViewController:  UICollectionViewDelegate, UICollectionViewDat
         cell.willDisplay(imageUrl: homeModel?[indexPath.row].downloadURL)
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-            let currentPage = collectionView.contentOffset.y / collectionView.frame.size.width;
-            if indexPath.row * 2 == homeModel?.count ?? 0 / 2 {
+        if let picCount = homeModel?.count {
+            if indexPath.row == picCount - 2 {
                 pageNumber += 1
-                DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+                DispatchQueue.main.asyncAfter(deadline: .now()) {
                     self.viewModel.getPictureList(page: self.pageNumber) { [self] result in
                         switch result {
                             case .failure(_):
@@ -68,7 +72,7 @@ extension HomepageViewController:  UICollectionViewDelegate, UICollectionViewDat
                     }
                 }
             }
-            
+        }
     }
     
 }
@@ -82,8 +86,4 @@ extension HomepageViewController: UICollectionViewDelegateFlowLayout {
             return CGSize(width: width, height: width) // You can change width and height here as pr your requirement
 
         }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: 200.0, height: 200.0)
-//    }
-
 }
