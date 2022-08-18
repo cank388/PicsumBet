@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		455AF38BA71D04F5A2806C89 /* Pods_PicsumBet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD78F21B35C3EFEA500AECD8 /* Pods_PicsumBet.framework */; };
 		C581F18A28ADFBC700CC96F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581F18928ADFBC700CC96F4 /* AppDelegate.swift */; };
 		C581F18C28ADFBC700CC96F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581F18B28ADFBC700CC96F4 /* SceneDelegate.swift */; };
 		C581F18E28ADFBC700CC96F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581F18D28ADFBC700CC96F4 /* ViewController.swift */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29A8E38554033ADAC965E58B /* Pods-PicsumBet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicsumBet.release.xcconfig"; path = "Target Support Files/Pods-PicsumBet/Pods-PicsumBet.release.xcconfig"; sourceTree = "<group>"; };
+		85CD0E895BE78AE1B8477BB4 /* Pods-PicsumBet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicsumBet.debug.xcconfig"; path = "Target Support Files/Pods-PicsumBet/Pods-PicsumBet.debug.xcconfig"; sourceTree = "<group>"; };
 		C581F18628ADFBC700CC96F4 /* PicsumBet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicsumBet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C581F18928ADFBC700CC96F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C581F18B28ADFBC700CC96F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		C581F1A028ADFFA300CC96F4 /* HomepageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewModel.swift; sourceTree = "<group>"; };
 		C581F1A328AE016C00CC96F4 /* HomepageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageCollectionViewCell.swift; sourceTree = "<group>"; };
 		C581F1A428AE016C00CC96F4 /* HomepageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomepageCollectionViewCell.xib; sourceTree = "<group>"; };
+		DD78F21B35C3EFEA500AECD8 /* Pods_PicsumBet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicsumBet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455AF38BA71D04F5A2806C89 /* Pods_PicsumBet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C447971E4776E6C80CECE58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85CD0E895BE78AE1B8477BB4 /* Pods-PicsumBet.debug.xcconfig */,
+				29A8E38554033ADAC965E58B /* Pods-PicsumBet.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B6214477026CE836CFAAF9FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD78F21B35C3EFEA500AECD8 /* Pods_PicsumBet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C581F17D28ADFBC700CC96F4 = {
 			isa = PBXGroup;
 			children = (
 				C581F18828ADFBC700CC96F4 /* PicsumBet */,
 				C581F18728ADFBC700CC96F4 /* Products */,
+				7C447971E4776E6C80CECE58 /* Pods */,
+				B6214477026CE836CFAAF9FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C581F19A28ADFBC800CC96F4 /* Build configuration list for PBXNativeTarget "PicsumBet" */;
 			buildPhases = (
+				9EAC53F74155AB828DE38EC3 /* [CP] Check Pods Manifest.lock */,
 				C581F18228ADFBC700CC96F4 /* Sources */,
 				C581F18328ADFBC700CC96F4 /* Frameworks */,
 				C581F18428ADFBC700CC96F4 /* Resources */,
+				B7B7C97059A3E4A60692B72A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +188,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9EAC53F74155AB828DE38EC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PicsumBet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7B7C97059A3E4A60692B72A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PicsumBet/Pods-PicsumBet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PicsumBet/Pods-PicsumBet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PicsumBet/Pods-PicsumBet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C581F18228ADFBC700CC96F4 /* Sources */ = {
@@ -316,6 +385,7 @@
 		};
 		C581F19B28ADFBC800CC96F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85CD0E895BE78AE1B8477BB4 /* Pods-PicsumBet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -344,6 +414,7 @@
 		};
 		C581F19C28ADFBC800CC96F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29A8E38554033ADAC965E58B /* Pods-PicsumBet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
