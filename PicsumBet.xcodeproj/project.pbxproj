@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		455AF38BA71D04F5A2806C89 /* Pods_PicsumBet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD78F21B35C3EFEA500AECD8 /* Pods_PicsumBet.framework */; };
+		C560168F28AE7432001AB6F6 /* PictureDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560168E28AE7432001AB6F6 /* PictureDetailViewModel.swift */; };
 		C581F18A28ADFBC700CC96F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581F18928ADFBC700CC96F4 /* AppDelegate.swift */; };
 		C581F18C28ADFBC700CC96F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581F18B28ADFBC700CC96F4 /* SceneDelegate.swift */; };
 		C581F18E28ADFBC700CC96F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581F18D28ADFBC700CC96F4 /* ViewController.swift */; };
@@ -18,11 +19,13 @@
 		C581F1A128ADFFA300CC96F4 /* HomepageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581F1A028ADFFA300CC96F4 /* HomepageViewModel.swift */; };
 		C581F1A528AE016C00CC96F4 /* HomepageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581F1A328AE016C00CC96F4 /* HomepageCollectionViewCell.swift */; };
 		C581F1A628AE016C00CC96F4 /* HomepageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C581F1A428AE016C00CC96F4 /* HomepageCollectionViewCell.xib */; };
+		C581F1A928AE680000CC96F4 /* PictureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581F1A828AE680000CC96F4 /* PictureDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		29A8E38554033ADAC965E58B /* Pods-PicsumBet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicsumBet.release.xcconfig"; path = "Target Support Files/Pods-PicsumBet/Pods-PicsumBet.release.xcconfig"; sourceTree = "<group>"; };
 		85CD0E895BE78AE1B8477BB4 /* Pods-PicsumBet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicsumBet.debug.xcconfig"; path = "Target Support Files/Pods-PicsumBet/Pods-PicsumBet.debug.xcconfig"; sourceTree = "<group>"; };
+		C560168E28AE7432001AB6F6 /* PictureDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDetailViewModel.swift; sourceTree = "<group>"; };
 		C581F18628ADFBC700CC96F4 /* PicsumBet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicsumBet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C581F18928ADFBC700CC96F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C581F18B28ADFBC700CC96F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +38,7 @@
 		C581F1A028ADFFA300CC96F4 /* HomepageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewModel.swift; sourceTree = "<group>"; };
 		C581F1A328AE016C00CC96F4 /* HomepageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageCollectionViewCell.swift; sourceTree = "<group>"; };
 		C581F1A428AE016C00CC96F4 /* HomepageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomepageCollectionViewCell.xib; sourceTree = "<group>"; };
+		C581F1A828AE680000CC96F4 /* PictureDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDetailViewController.swift; sourceTree = "<group>"; };
 		DD78F21B35C3EFEA500AECD8 /* Pods_PicsumBet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicsumBet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -56,7 +60,6 @@
 				85CD0E895BE78AE1B8477BB4 /* Pods-PicsumBet.debug.xcconfig */,
 				29A8E38554033ADAC965E58B /* Pods-PicsumBet.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -89,6 +92,7 @@
 		C581F18828ADFBC700CC96F4 /* PicsumBet */ = {
 			isa = PBXGroup;
 			children = (
+				C581F1A728AE67E500CC96F4 /* PictureDetail */,
 				C581F19D28ADFF8600CC96F4 /* Homepage */,
 				C581F18928ADFBC700CC96F4 /* AppDelegate.swift */,
 				C581F18B28ADFBC700CC96F4 /* SceneDelegate.swift */,
@@ -118,6 +122,15 @@
 				C581F1A428AE016C00CC96F4 /* HomepageCollectionViewCell.xib */,
 			);
 			path = HomepageCell;
+			sourceTree = "<group>";
+		};
+		C581F1A728AE67E500CC96F4 /* PictureDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C581F1A828AE680000CC96F4 /* PictureDetailViewController.swift */,
+				C560168E28AE7432001AB6F6 /* PictureDetailViewModel.swift */,
+			);
+			path = PictureDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +251,8 @@
 			files = (
 				C581F1A128ADFFA300CC96F4 /* HomepageViewModel.swift in Sources */,
 				C581F19F28ADFF9900CC96F4 /* HomepageViewController.swift in Sources */,
+				C560168F28AE7432001AB6F6 /* PictureDetailViewModel.swift in Sources */,
+				C581F1A928AE680000CC96F4 /* PictureDetailViewController.swift in Sources */,
 				C581F1A528AE016C00CC96F4 /* HomepageCollectionViewCell.swift in Sources */,
 				C581F18E28ADFBC700CC96F4 /* ViewController.swift in Sources */,
 				C581F18A28ADFBC700CC96F4 /* AppDelegate.swift in Sources */,

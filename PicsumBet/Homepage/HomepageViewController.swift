@@ -39,6 +39,7 @@ class HomepageViewController: UIViewController {
 }
 
 extension HomepageViewController:  UICollectionViewDelegate, UICollectionViewDataSource {
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -75,6 +76,12 @@ extension HomepageViewController:  UICollectionViewDelegate, UICollectionViewDat
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "PictureDetailViewController") as! PictureDetailViewController
+        nextVC.pictureModel = homeModel?[indexPath.row]
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
 }
 
 extension HomepageViewController: UICollectionViewDelegateFlowLayout {
@@ -83,7 +90,6 @@ extension HomepageViewController: UICollectionViewDelegateFlowLayout {
             let numberOfItemsPerRow: CGFloat = 2.0
 
             let width = (collectionView.frame.width-leftAndRightPaddings)/numberOfItemsPerRow
-            return CGSize(width: width, height: width) // You can change width and height here as pr your requirement
-
+            return CGSize(width: width, height: width)
         }
 }
