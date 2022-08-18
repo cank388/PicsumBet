@@ -10,6 +10,7 @@ import UIKit
 class HomepageViewModel {
     
     var postData:PicModel?
+    var pageNumber = 1
 
     func getPictureList(page: Int, completion : @escaping (Result<[PicModel], Error>) -> (Void)) {
         let url = URL(string: "https://picsum.photos/v2/list?page=\(page)&limit=16")!
@@ -34,16 +35,4 @@ class HomepageViewModel {
     }
 
     
-}
-
-
-struct PicModel: Codable {
-    let id, author: String
-    let width, height: Int
-    let url, downloadURL: String
-
-    enum CodingKeys: String, CodingKey {
-        case id, author, width, height, url
-        case downloadURL = "download_url"
-    }
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		455AF38BA71D04F5A2806C89 /* Pods_PicsumBet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD78F21B35C3EFEA500AECD8 /* Pods_PicsumBet.framework */; };
 		C560168F28AE7432001AB6F6 /* PictureDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560168E28AE7432001AB6F6 /* PictureDetailViewModel.swift */; };
+		C560169228AE9565001AB6F6 /* PictureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560169128AE9565001AB6F6 /* PictureModel.swift */; };
 		C581F18A28ADFBC700CC96F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581F18928ADFBC700CC96F4 /* AppDelegate.swift */; };
 		C581F18C28ADFBC700CC96F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581F18B28ADFBC700CC96F4 /* SceneDelegate.swift */; };
 		C581F18E28ADFBC700CC96F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581F18D28ADFBC700CC96F4 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 		29A8E38554033ADAC965E58B /* Pods-PicsumBet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicsumBet.release.xcconfig"; path = "Target Support Files/Pods-PicsumBet/Pods-PicsumBet.release.xcconfig"; sourceTree = "<group>"; };
 		85CD0E895BE78AE1B8477BB4 /* Pods-PicsumBet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicsumBet.debug.xcconfig"; path = "Target Support Files/Pods-PicsumBet/Pods-PicsumBet.debug.xcconfig"; sourceTree = "<group>"; };
 		C560168E28AE7432001AB6F6 /* PictureDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDetailViewModel.swift; sourceTree = "<group>"; };
+		C560169128AE9565001AB6F6 /* PictureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureModel.swift; sourceTree = "<group>"; };
 		C581F18628ADFBC700CC96F4 /* PicsumBet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicsumBet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C581F18928ADFBC700CC96F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C581F18B28ADFBC700CC96F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C560169028AE9557001AB6F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C560169128AE9565001AB6F6 /* PictureModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C581F17D28ADFBC700CC96F4 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +102,7 @@
 		C581F18828ADFBC700CC96F4 /* PicsumBet */ = {
 			isa = PBXGroup;
 			children = (
+				C560169028AE9557001AB6F6 /* Model */,
 				C581F1A728AE67E500CC96F4 /* PictureDetail */,
 				C581F19D28ADFF8600CC96F4 /* Homepage */,
 				C581F18928ADFBC700CC96F4 /* AppDelegate.swift */,
@@ -249,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C560169228AE9565001AB6F6 /* PictureModel.swift in Sources */,
 				C581F1A128ADFFA300CC96F4 /* HomepageViewModel.swift in Sources */,
 				C581F19F28ADFF9900CC96F4 /* HomepageViewController.swift in Sources */,
 				C560168F28AE7432001AB6F6 /* PictureDetailViewModel.swift in Sources */,

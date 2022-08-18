@@ -14,9 +14,11 @@ class HomepageCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
+    
     func willDisplay(imageUrl: String?) {
+        // Change the width and height to load faster
         var finalUrl = ""
         if let url = imageUrl {
             let finalArray = url.components(separatedBy: "/")
