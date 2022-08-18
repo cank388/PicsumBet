@@ -13,6 +13,8 @@
 		C581F19128ADFBC700CC96F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C581F18F28ADFBC700CC96F4 /* Main.storyboard */; };
 		C581F19328ADFBC800CC96F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C581F19228ADFBC800CC96F4 /* Assets.xcassets */; };
 		C581F19628ADFBC800CC96F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C581F19428ADFBC800CC96F4 /* LaunchScreen.storyboard */; };
+		C581F19F28ADFF9900CC96F4 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581F19E28ADFF9900CC96F4 /* HomepageViewController.swift */; };
+		C581F1A128ADFFA300CC96F4 /* HomepageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C581F1A028ADFFA300CC96F4 /* HomepageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C581F19228ADFBC800CC96F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C581F19528ADFBC800CC96F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C581F19728ADFBC800CC96F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C581F19E28ADFF9900CC96F4 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
+		C581F1A028ADFFA300CC96F4 /* HomepageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		C581F18828ADFBC700CC96F4 /* PicsumBet */ = {
 			isa = PBXGroup;
 			children = (
+				C581F19D28ADFF8600CC96F4 /* Homepage */,
 				C581F18928ADFBC700CC96F4 /* AppDelegate.swift */,
 				C581F18B28ADFBC700CC96F4 /* SceneDelegate.swift */,
 				C581F18D28ADFBC700CC96F4 /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				C581F19728ADFBC800CC96F4 /* Info.plist */,
 			);
 			path = PicsumBet;
+			sourceTree = "<group>";
+		};
+		C581F19D28ADFF8600CC96F4 /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+				C581F19E28ADFF9900CC96F4 /* HomepageViewController.swift */,
+				C581F1A028ADFFA300CC96F4 /* HomepageViewModel.swift */,
+			);
+			path = Homepage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C581F1A128ADFFA300CC96F4 /* HomepageViewModel.swift in Sources */,
+				C581F19F28ADFF9900CC96F4 /* HomepageViewController.swift in Sources */,
 				C581F18E28ADFBC700CC96F4 /* ViewController.swift in Sources */,
 				C581F18A28ADFBC700CC96F4 /* AppDelegate.swift in Sources */,
 				C581F18C28ADFBC700CC96F4 /* SceneDelegate.swift in Sources */,
