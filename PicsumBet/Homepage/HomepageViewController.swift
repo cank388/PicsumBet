@@ -11,7 +11,7 @@ class HomepageViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var viewModel = HomepageViewModel()
-    var homeModel: [PicModel]?
+    var homeModel: [PictureModel]?
 
     override func viewDidLoad() {
         super.viewDidLoad()

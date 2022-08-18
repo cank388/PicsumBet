@@ -10,7 +10,7 @@ import UIKit
 class PictureDetailViewController: UIViewController {
     
     var viewModel = PictureDetailViewModel()
-    var pictureModel: PicModel?
+    var pictureModel: PictureModel?
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var authorLabel: UILabel!

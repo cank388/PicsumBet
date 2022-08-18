@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PicModel: Codable {
+struct PictureModel: Codable {
     let id, author: String
     let width, height: Int
     let url, downloadURL: String

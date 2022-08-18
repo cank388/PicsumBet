@@ -9,10 +9,10 @@ import UIKit
 
 class HomepageViewModel {
     
-    var postData:PicModel?
+    var postData:PictureModel?
     var pageNumber = 1
 
-    func getPictureList(page: Int, completion : @escaping (Result<[PicModel], Error>) -> (Void)) {
+    func getPictureList(page: Int, completion : @escaping (Result<[PictureModel], Error>) -> (Void)) {
         let url = URL(string: "https://picsum.photos/v2/list?page=\(page)&limit=16")!
         URLSession.shared.dataTask(with: url) { [weak self] (data, urlResponse, error) in
             if let error = error {
@@ -26,7 +26,7 @@ class HomepageViewModel {
             }
             
             do {
-                let resources = try JSONDecoder().decode([PicModel].self, from: data)
+                let resources = try JSONDecoder().decode([PictureModel].self, from: data)
                 completion(.success(resources))
             } catch {
                 completion(.failure(error))

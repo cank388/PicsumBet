@@ -31,7 +31,7 @@ class PictureDetailViewModel {
         }
     }
     
-    func setGeneralSpesificationLabel(label: UILabel, pictureModel: PicModel) {
+    func setGeneralSpesificationLabel(label: UILabel, pictureModel: PictureModel) {
         label.text = "Width: " + pictureModel.width.description + "\n" +
                                       "Height: " + pictureModel.height.description + "\n" +
                                         "URL: " + pictureModel.url
