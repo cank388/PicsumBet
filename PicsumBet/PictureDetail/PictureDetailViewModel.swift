@@ -6,32 +6,44 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PictureDetailViewModel {
     
-    var postData:PicModel?
-
-    func getPictureList(page: Int, completion : @escaping (Result<[PicModel], Error>) -> (Void)) {
-        let url = URL(string: "https://picsum.photos/v2/list?page=\(page)&limit=16")!
-        URLSession.shared.dataTask(with: url) { [weak self] (data, urlResponse, error) in
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-            
-            guard let data = data, data.isEmpty == false else {
-                completion(.failure(error?.localizedDescription as! Error))
-                return
-            }
-            
-            do {
-                let resources = try JSONDecoder().decode([PicModel].self, from: data)
-                completion(.success(resources))
-            } catch {
-                completion(.failure(error))
-            }
-        }.resume()
+    func convertImageToBlur(imageView: UIImageView, url: String) {
+        imageView.kf.indicatorType = .activity
+        imageView.kf.setImage(
+            with: URL(string: String(url + "?blur=2&grayscale")),
+            placeholder: UIImage(named: "placeholderImage"),
+            options: [
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(1)),
+                .cacheOriginalImage
+            ])
+        {
+            result in
+//            switch result {
+//            case .success(_):
+//                // We can send data to firebase here
+//            case .failure(_):
+               // We can send data to firebase here
+//            }
+        }
     }
+    
+    func setGeneralSpesificationLabel(label: UILabel, pictureModel: PicModel) {
+        label.text = "Width: " + pictureModel.width.description + "\n" +
+                                      "Height: " + pictureModel.height.description + "\n" +
+                                        "URL: " + pictureModel.url
 
+    }
+    
+    func setAuthorLabel(label: UILabel, pictureModel: String) {
+        label.text = "Author: " + pictureModel
+    }
+    
+    func setImageView(imageView: UIImageView, url: String) {
+        imageView.kf.setImage(with: URL(string: url))
+    }
     
 }
